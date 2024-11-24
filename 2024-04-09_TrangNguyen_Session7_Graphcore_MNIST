@@ -1,0 +1,105 @@
+(poptorch33_env) (base) tnguyent@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ /opt/slurm/bin/srun --ipus=1 python mnist_poptorch.py
+srun: job 28011 queued and waiting for resources
+srun: job 28011 has been allocated resources
+100%|██████████| 9912422/9912422 [00:00<00:00, 48024376.50it/s]
+100%|██████████| 28881/28881 [00:00<00:00, 1477408.70it/s]
+100%|██████████| 1648877/1648877 [00:00<00:00, 15958399.05it/s]
+100%|██████████| 4542/4542 [00:00<00:00, 26907526.51it/s]
+Epochs:   0%|          | 0/10 [00:00<?,[20:45:33.741] [poptorch:cpp] [warning] [DISPATCHER] Type coerced from Long to Int for tensor id 10        | 0/150 [00:00<?, ?it/s]
+                                                       2024-11-24T20:45:34.224970Z PL:POPLIN    3851448.3851448 W: poplin::preplanConvolution() is deprecated! Use poplin::preplan() instead
+Graph compilation:   3%|▎         | 3/100 [00:00<00:03]2024-11-24T20:45:37.681354Z PL:POPLIN    3851448.3851448 W: poplin::preplanMatMuls() is deprecated! Use poplin::preplan() instead
+Graph compilation: 100%|██████████| 100/100 [00:21<00:00]2024-11-24T20:45:55.966848Z popart:session 3851448.3851448 W: Rng state buffer was not serialized.You did not load poplar Engine.Remember that if you would like to run the model using the model runtime then you have to create your own buffer and callback in your model runtime application for rngStateTensor.
+
+Epochs: 100%|██████████| 10/10 [01:49<00:00, 10.95s/it]
+  0%|          | 0/125 [00:00<?, ?it/s]                2024-11-24T20:47:23.564925Z PL:POPLIN    3851448.3851448 W: poplin::preplanConvolution() is deprecated! Use poplin::preplan() instead
+                                                       2024-11-24T20:47:25.743868Z PL:POPLIN    3851448.3851448 W: poplin::preplanMatMuls() is deprecated! Use poplin::preplan() instead2]
+Graph compilation: 100%|██████████| 100/100 [00:14<00:00]
+ 91%|█████████ | 1Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz to /home/tnguyent/.torch/datasets/MNIST/raw/train-images-idx3-ubyte.gz
+Extracting /home/tnguyent/.torch/datasets/MNIST/raw/train-images-idx3-ubyte.gz to /home/tnguyent/.torch/datasets/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz to /home/tnguyent/.torch/datasets/MNIST/raw/train-labels-idx1-ubyte.gz
+Extracting /home/tnguyent/.torch/datasets/MNIST/raw/train-labels-idx1-ubyte.gz to /home/tnguyent/.torch/datasets/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz to /home/tnguyent/.torch/datasets/MNIST/raw/t10k-images-idx3-ubyte.gz
+Extracting /home/tnguyent/.torch/datasets/MNIST/raw/t10k-images-idx3-ubyte.gz to /home/tnguyent/.torch/datasets/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+Failed to download (trying next):
+HTTP Error 403: Forbidden
+
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz
+Downloading https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz to /home/tnguyent/.torch/datasets/MNIST/raw/t10k-labels-idx1-ubyte.gz
+Extracting /home/tnguyent/.torch/datasets/MNIST/raw/t10k-labels-idx1-ubyte.gz to /home/tnguyent/.torch/datasets/MNIST/raw
+
+TrainingModelWithLoss(
+  (model): Network(
+    (layer1): Block(
+      (conv): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer2): Block(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer3): Linear(in_features=1600, out_features=128, bias=True)
+    (layer3_act): ReLU()
+    (layer3_dropout): Dropout(p=0.5, inplace=False)
+    (layer4): Linear(in_features=128, out_features=10, bias=True)
+    (softmax): Softmax(dim=1)
+  )
+  (loss): CrossEntropyLoss()
+)
+Accuracy on test set: 98.38%
+(poptorch33_env) (base) tnguyent@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ ls
+metrics.py  mnist_poptorch_code_only.py  mnist_poptorch.ipynb  mnist_poptorch.py  __pycache__  README.md  requirements.txt  tests
+(poptorch33_env) (base) tnguyent@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ cp mnist_poptorch.py mnist_poptorch_homework.py
+(poptorch33_env) (base) tnguyent@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ ls
+metrics.py		     mnist_poptorch_homework.py  mnist_poptorch.py  README.md	      tests
+mnist_poptorch_code_only.py  mnist_poptorch.ipynb	 __pycache__	    requirements.txt
+(poptorch33_env) (base) tnguyent@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ vim mnist_poptorch_homework.py 
+(poptorch33_env) (base) tnguyent@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ /opt/slurm/bin/srun --ipus=1 python mnist_poptorch_homework.py
+srun: job 28012 queued and waiting for resources
+srun: job 28012 has been allocated resources
+Epochs:   0%|          | 0/10 [00:00<?,[20:51:22.138] [poptorch:cpp] [warning] [DISPATCHER] Type coerced from Long to Int for tensor id 10        | 0/150 [00:00<?, ?it/s]
+Graph compilation: 100%|██████████| 100/100 [00:00<00:00]
+Epochs: 100%|██████████| 10/10 [01:26<00:00,  8.66s/it]
+Graph compilation: 100%|██████████| 100/100 [00:00<00:00]                          
+ 85%|████████▍ | 106/125 [00:03<TrainingModelWithLoss(00]
+  (model): Network(
+    (layer1): Block(
+      (conv): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer2): Block(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer3): Linear(in_features=1600, out_features=128, bias=True)
+    (layer3_act): ReLU()
+    (layer3_dropout): Dropout(p=0.5, inplace=False)
+    (layer4): Linear(in_features=128, out_features=10, bias=True)
+    (softmax): Softmax(dim=1)
+  )
+  (loss): CrossEntropyLoss()
+)
+Accuracy on test set: 97.82%
+
