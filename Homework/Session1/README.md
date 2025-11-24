@@ -3,7 +3,7 @@
 **Method:**
 `comm.Split_type(MPI.COMM_TYPE_SHARED)` was used to create a communicator containing only processes on the same physical node. The rank within this communicator served as the `LOCAL_RANK`.
 
-** Key Observations:**
+**Key Observations:**
 * **Rank Initialization:** The logs confirm correct mapping of Global Ranks (0-3) to Local Ranks (0-3) without using PALS environment variables.
 * **Processor Affinity:** The `cpubind:list` output confirms that the MPI launcher correctly pinned processes to specific CPU cores, preventing resource contention.
     * Rank 0: `mask 0x3` (Cores 0-1)
