@@ -6,9 +6,9 @@ Investigate the performance of combining Fully Sharded Data Parallel (FSDP) with
 
 | Experiment | TP Degree | Avg Iteration Time (`train_dt`) | Performance Delta |
 | :--- | :--- | :--- | :--- |
-| **Run 1** | TP = 1 | **~0.1257 s** (126ms) | Baseline |
-| **Run 2** | TP = 2 | **~0.1220 s** (122ms) | -2.9% (Faster) |
-| **Run 3** | TP = 4 | **~0.1219 s** (123ms) | -3.0% (Faster) |
+| **Run 1** | TP = 1 | **~0.1257 s** (125.7ms) | Baseline |
+| **Run 2** | TP = 2 | **~0.1220 s** (122.0ms) | -2.9% (Faster) |
+| **Run 3** | TP = 4 | **~0.1219 s** (121.9ms) | -3.0% (Faster) |
 
 **Key Observations:**
 
