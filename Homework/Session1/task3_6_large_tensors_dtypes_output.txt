@@ -1,0 +1,46 @@
+tnguyent@x3103c0s13b1n0:~/ai-science-training-series/01-AI-at-Scale> bash run_ddp_pytorch_2p8_large_tensors_dtypes_N1_R4.sh
+Lmod is automatically replacing "nvidia/24.11" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-nvidia/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.32
+
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: cpubind:list x3103c0s13b1n0 pid 2326058 rank 0 0: mask 0x3
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 1: cpubind:list x3103c0s13b1n0 pid 2326059 rank 1 1: mask 0x300
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 2: cpubind:list x3103c0s13b1n0 pid 2326060 rank 2 2: mask 0x30000
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 3: cpubind:list x3103c0s13b1n0 pid 2326061 rank 3 3: mask 0x3000000
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: ========================================
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0:  CONFIGURATION: Rank Size 4
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0:  Dims: [Samples=2048, Embed=1024]
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0:  Dtype: fp32 | Batch: 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: ========================================
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 1: Time=7.95s | Compute=7.75s | Wait=0.20s | Rate=258 samp/s | Mem=4.05 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 2: Time=5.80s | Compute=5.64s | Wait=0.16s | Rate=353 samp/s | Mem=4.05 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 3: Time=7.04s | Compute=6.94s | Wait=0.10s | Rate=291 samp/s | Mem=4.05 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 4: Time=5.34s | Compute=5.24s | Wait=0.10s | Rate=384 samp/s | Mem=4.05 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 5: Time=10.22s | Compute=9.96s | Wait=0.26s | Rate=200 samp/s | Mem=4.05 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Total Run Time: 36.35s
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: cpubind:list x3103c0s13b1n0 pid 2326669 rank 0 0: mask 0x3
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 1: cpubind:list x3103c0s13b1n0 pid 2326670 rank 1 1: mask 0x300
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 2: cpubind:list x3103c0s13b1n0 pid 2326671 rank 2 2: mask 0x30000
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 3: cpubind:list x3103c0s13b1n0 pid 2326672 rank 3 3: mask 0x3000000
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: ========================================
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0:  CONFIGURATION: Rank Size 4
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0:  Dims: [Samples=10000, Embed=4096]
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0:  Dtype: bf16 | Batch: 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: ========================================
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 1: Time=28.89s | Compute=28.76s | Wait=0.13s | Rate=346 samp/s | Mem=15.78 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 2: Time=31.47s | Compute=31.43s | Wait=0.04s | Rate=318 samp/s | Mem=15.78 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 3: Time=27.85s | Compute=27.68s | Wait=0.17s | Rate=359 samp/s | Mem=15.78 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 4: Time=26.58s | Compute=26.49s | Wait=0.09s | Rate=376 samp/s | Mem=15.78 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Epoch 5: Time=28.68s | Compute=28.53s | Wait=0.15s | Rate=349 samp/s | Mem=15.78 GB
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Total Run Time: 143.48s

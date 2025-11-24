@@ -1,0 +1,180 @@
+tnguyent@x3103c0s13b1n0:~/ai-science-training-series/01-AI-at-Scale> bash run_ddp_pytorch_2p8_pure_mpi4py_N1_R4.sh
+
+Lmod is automatically replacing "nvidia/24.11" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-nvidia/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.32
+
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: cpubind:list x3103c0s13b1n0 pid 2394762 rank 0 0: mask 0x3
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 1: cpubind:list x3103c0s13b1n0 pid 2394763 rank 1 1: mask 0x300
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 2: cpubind:list x3103c0s13b1n0 pid 2394764 rank 2 2: mask 0x30000
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 3: cpubind:list x3103c0s13b1n0 pid 2394765 rank 3 3: mask 0x3000000
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: DDP: Hi from rank 0 of 4 with local rank 0.x3103c0s13b1n0
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 1: DDP: Hi from rank 1 of 4 with local rank 1.x3103c0s13b1n0
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 2: DDP: Hi from rank 2 of 4 with local rank 2.x3103c0s13b1n0
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 3: DDP: Hi from rank 3 of 4 with local rank 3.x3103c0s13b1n0
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: Micro-batch size = 32
+x3103c0s13b1n0.hsn.cm.polaris.alcf.anl.gov 0: total train time: 4.61s
