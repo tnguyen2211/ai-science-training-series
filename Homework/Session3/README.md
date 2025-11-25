@@ -18,3 +18,5 @@ The following parameters were modified in `3_ml_in_the_loop.py` to achieve these
 initial_training_count = 16   # Increased from 8 to improve initial model quality
 max_training_count = 200      # Increased from 24 to allow convergence on high-energy targets
 batch_size = 64               # Increased from 4 to saturate Polaris CPU cores
+```
+!(parsl_ml_in_the_loop.png)
