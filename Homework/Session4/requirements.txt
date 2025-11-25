@@ -1,0 +1,7 @@
+langchain
+langgraph
+langchain-openai
+ase
+mace-torch
+rdkit
+pubchempy
