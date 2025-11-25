@@ -1,0 +1,141 @@
+(2025-09-25//lus/eagle/projects/ALCFAITP/04-Inference-Workflows/env/_ai4s_agentic_conda) tnguyent@x3005c0s13b0n0:~/ai-science-training-series/04-Inference-Workflows/Agentic-workflows> python trangNguyen_multi_agent.py 
+--- User Input: Optimize Acetone using MACE. Calculate its molecular weight. Return results in JSON. ---
+================================ Human Message =================================
+
+Optimize Acetone using MACE. Calculate its molecular weight. Return results in JSON.
+================================== Ai Message ==================================
+Tool Calls:
+  smiles_to_coordinate_file (chatcmpl-tool-d6bab0bda7bf41b3afdc02cf3fae1aef)
+ Call ID: chatcmpl-tool-d6bab0bda7bf41b3afdc02cf3fae1aef
+  Args:
+    name: Acetone
+================================= Tool Message =================================
+Name: smiles_to_coordinate_file
+
+Error invoking tool 'smiles_to_coordinate_file' with kwargs {'name': 'Acetone'} with error:
+ smiles: Field required
+ Please fix the error and try again.
+================================== Ai Message ==================================
+Tool Calls:
+  smiles_to_coordinate_file (chatcmpl-tool-42fd5a8170a04e3f88854bb22952418d)
+ Call ID: chatcmpl-tool-42fd5a8170a04e3f88854bb22952418d
+  Args:
+    smiles: CC(=O)C
+================================= Tool Message =================================
+Name: smiles_to_coordinate_file
+
+{"ok": true, "artifact": "coordinate_file", "path": "/home/tnguyent/ai-science-training-series/04-Inference-Workflows/Agentic-workflows/molecule.xyz", "smiles": "CC(=O)C", "natoms": 10}
+================================== Ai Message ==================================
+Tool Calls:
+  run_mace_calculation (chatcmpl-tool-f6d9d7fafb304532b26bcc2cead26e7f)
+ Call ID: chatcmpl-tool-f6d9d7fafb304532b26bcc2cead26e7f
+  Args:
+    input_file: /home/tnguyent/ai-science-training-series/04-Inference-Workflows/Agentic-workflows/molecule.xyz
+    mace_model_name: small
+    device: cpu
+    optimize: True
+    fmax: 0.05
+    max_steps: 200
+/lus/eagle/projects/ALCFAITP/04-Inference-Workflows/env/_ai4s_agentic_conda/lib/python3.10/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using Materials Project MACE for MACECalculator with /home/tnguyent/.cache/mace/20231210mace128L0_energy_epoch249model
+Using float32 for MACECalculator, which is faster but less accurate. Recommended for MD. Use float64 for geometry optimization.
+/lus/eagle/projects/ALCFAITP/04-Inference-Workflows/env/_ai4s_agentic_conda/lib/python3.10/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Using head Default out of ['Default']
+Default dtype float32 does not match model dtype float64, converting models to float32.
+      Step     Time          Energy          fmax
+BFGS:    0 04:19:08      -55.506649        1.296843
+BFGS:    1 04:19:08      -55.532719        0.675341
+BFGS:    2 04:19:08      -55.537453        0.169515
+BFGS:    3 04:19:08      -55.539276        0.173414
+BFGS:    4 04:19:08      -55.542706        0.189396
+BFGS:    5 04:19:08      -55.544113        0.139088
+BFGS:    6 04:19:08      -55.544876        0.091778
+BFGS:    7 04:19:08      -55.545547        0.096713
+BFGS:    8 04:19:08      -55.546219        0.106237
+BFGS:    9 04:19:08      -55.546700        0.086209
+BFGS:   10 04:19:08      -55.547005        0.044530
+================================= Tool Message =================================
+Name: run_mace_calculation
+
+{"status": "success", "message": "MACE geometry optimization completed.", "mode": "geometry_optimization", "converged": true, "input_file": "/home/tnguyent/ai-science-training-series/04-Inference-Workflows/Agentic-workflows/molecule.xyz", "mace_model_name": "small", "device": "cpu", "final_energy_eV": -55.54700469970703, "final_positions": [[-1.3068784638904904, -0.17905183869247054, -0.16341393884172842], [-0.031484336949516044, 0.5203588454131503, 0.2854141103553286], [-0.09704321242844147, 1.6038831650750887, 0.879722473416247], [1.3244673966895781, -0.1116486555812218, 0.003965923980663663], [-1.063501448478351, -1.122419279802387, -0.6716308762462977], [-1.8715019158751045, 0.46865142635799045, -0.8507326532232292], [-1.9484992994008685, -0.3895167228659122, 0.7053515178309578], [1.8608064170355096, -0.2919411086839573, 0.9476612577481365], [1.937810181396671, 0.5662291637654461, -0.6084212592758362], [1.195824700597403, -1.0645449834429028, -0.5279165232678739]], "final_cell": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]], "fmax_used": 0.05, "max_steps_used": 200}
+================================== Ai Message ==================================
+
+```json
+{
+  "molecule_name": "Acetone",
+  "smiles": "CC(=O)C",
+  "molecular_weight_gmol": 58.08,
+  "mace_optimization": {
+    "model": "small",
+    "device": "cpu",
+    "converged": true,
+    "final_energy_eV": -55.54700469970703,
+    "fmax_used_eV_per_A": 0.05,
+    "max_steps_used": 200,
+    "final_positions_A": [
+      [-1.3068784638904904, -0.17905183869247054, -0.16341393884172842],
+      [-0.031484336949516044, 0.5203588454131503, 0.2854141103553286],
+      [-0.09704321242844147, 1.6038831650750887, 0.879722473416247],
+      [1.3244673966895781, -0.1116486555812218, 0.003965923980663663],
+      [-1.063501448478351, -1.122419279802387, -0.6716308762462977],
+      [-1.8715019158751045, 0.46865142635799045, -0.8507326532232292],
+      [-1.9484992994008685, -0.3895167228659122, 0.7053515178309578],
+      [1.8608064170355096, -0.2919411086839573, 0.9476612577481365],
+      [1.937810181396671, 0.5662291637654461, -0.6084212592758362],
+      [1.195824700597403, -1.0645449834429028, -0.5279165232678739]
+    ],
+    "final_cell_A": [
+      [0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0]
+    ]
+  }
+}
+```
+================================== Ai Message ==================================
+Tool Calls:
+  calculate_molecular_weight (chatcmpl-tool-68c54154dd2e4c28be71865213a2763e)
+ Call ID: chatcmpl-tool-68c54154dd2e4c28be71865213a2763e
+  Args:
+    smiles: CC(=O)C
+================================= Tool Message =================================
+Name: calculate_molecular_weight
+
+58.08
+================================== Ai Message ==================================
+
+```json
+{
+  "molecule_name": "Acetone",
+  "smiles": "CC(=O)C",
+  "molecular_weight_gmol": 58.08,
+  "mace_optimization": {
+    "model": "small",
+    "device": "cpu",
+    "converged": true,
+    "final_energy_eV": -55.54700469970703,
+    "fmax_used_eV_per_A": 0.05,
+    "max_steps_used": 200,
+    "final_positions_A": [
+      [-1.3068784638904904, -0.17905183869247054, -0.16341393884172842],
+      [-0.031484336949516044, 0.5203588454131503, 0.2854141103553286],
+      [-0.09704321242844147, 1.6038831650750887, 0.879722473416247],
+      [1.3244673966895781, -0.1116486555812218, 0.003965923980663663],
+      [-1.063501448478351, -1.122419279802387, -0.6716308762462977],
+      [-1.8715019158751045, 0.46865142635799045, -0.8507326532232292],
+      [-1.9484992994008685, -0.3895167228659122, 0.7053515178309578],
+      [1.8608064170355096, -0.2919411086839573, 0.9476612577481365],
+      [1.937810181396671, 0.5662291637654461, -0.6084212592758362],
+      [1.195824700597403, -1.0645449834429028, -0.5279165232678739]
+    ],
+    "final_cell_A": [
+      [0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0]
+    ]
+  }
+}
+```
