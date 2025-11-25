@@ -9,6 +9,30 @@ I ran a serial benchmark processing 5 samples from the IMDB dataset using the AL
 | **Metis** | SambaNova SN40L | **5.95s** | **34.60 tokens/sec** |
 | **Sophia** | NVIDIA A100 (vLLM) | 9.99s | 15.42 tokens/sec |
 
+### Output
+```
+Starting Benchmark...
+
+--- Testing Metis (SambaNova) (Model: gpt-oss-120b-131072) ---
+  [Req 1] Success (50 tokens)
+  [Req 2] Success (30 tokens)
+  [Req 3] Success (27 tokens)
+  [Req 4] Success (55 tokens)
+  [Req 5] Success (44 tokens)
+  > Duration: 5.95s
+  > Throughput: 34.60 tokens/sec
+
+--- Testing Sophia (NVIDIA) (Model: openai/gpt-oss-120b) ---
+  [Req 1] Success (31 tokens)
+  [Req 2] Success (24 tokens)
+  [Req 3] Success (33 tokens)
+  [Req 4] Success (32 tokens)
+  [Req 5] Success (34 tokens)
+  > Duration: 9.99s
+  > Throughput: 15.42 tokens/sec
+
+```
+
 ### Reasoning & Observations
 
 **1. Metis (SambaNova) Superiority for Low Latency:**
