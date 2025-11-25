@@ -1,0 +1,153 @@
+(2025-09-25//eagle/ALCFAITP/03-Coupling-Sim-AI/_ai4s_simAI) tnguyent@x3006c0s19b1n0:~/ai-science-training-series/03-Coupling-Sim-AI/producer-consumer> bash 9_submit_multinode.sh 
+9_submit_multinode.sh: line 12: cd: /srv/jupyter: No such file or directory
+environment: line 5: __conda_exe: command not found
+Running producer-consumer scripts
+with 64 simulations of 512 x 512 grid
+
+Let's do a warmup run first with the Parsl + file system implementation (DISCARD THIS DATA)
+Launching 64 simulations on 32 workers to generate training data of size 1.25 GB ...
+Done in 16.43 seconds
+IO time: 0.098 seconds
+
+Launching 4 CNN models to train on the simulaiton data ...
+Done in 15.82 seconds
+IO time: 0.490 seconds
+
+
+Running with Parsl writing to the file system
+Launching 64 simulations on 32 workers to generate training data of size 1.25 GB ...
+Done in 16.42 seconds
+IO time: 0.091 seconds
+
+Launching 4 CNN models to train on the simulaiton data ...
+Done in 15.60 seconds
+IO time: 0.478 seconds
+
+
+Running with DragonHPC
+Dragon running on 1 nodes
+['x3006c0s19b1n0'] 
+
+Started DDict on 1 nodes with 151.0 GB of memory
+
+Launching 64 simulations on 32 workers to generate training data of size 1.25 GB ...
+Done in 11.86 seconds
+IO time: 0.072 seconds
+
+Launching 4 CNN models to train on the simulaiton data ...
+Done in 21.84 seconds
+IO time: 1.392 seconds
+
+
+Running with Parsl tranfering data through futures (last since it will take longer)
+Launching 64 simulations on 32 workers to generate training data of size 1.25 GB ...
+Done in 19.62 seconds
+
+Launching 4 CNN models to train on the simulaiton data ...
+Done in 49.22 seconds
+
+
+(2025-09-25//eagle/ALCFAITP/03-Coupling-Sim-AI/_ai4s_simAI) tnguyent@x3006c0s19b0n0:~/ai-science-training-series/03-Coupling-Sim-AI/producer-consumer> bash 9_submit_multinode.sh 
+9_submit_multinode.sh: line 12: cd: /srv/jupyter: No such file or directory
+environment: line 5: __conda_exe: command not found
+Running producer-consumer scripts
+with 64 simulations of 512 x 512 grid
+
+Let's do a warmup run first with the Parsl + file system implementation (DISCARD THIS DATA)
+Launching 64 simulations on 64 workers to generate training data of size 1.25 GB ...
+Done in 13.43 seconds
+IO time: 0.122 seconds
+
+Launching 8 CNN models to train on the simulaiton data ...
+Done in 51.47 seconds
+IO time: 1.942 seconds
+
+
+Running with Parsl writing to the file system
+Launching 64 simulations on 64 workers to generate training data of size 1.25 GB ...
+Done in 12.40 seconds
+IO time: 0.111 seconds
+
+Launching 8 CNN models to train on the simulaiton data ...
+Done in 34.50 seconds
+IO time: 2.149 seconds
+
+
+Running with DragonHPC
+Dragon running on 2 nodes
+['x3006c0s19b0n0', 'x3006c0s19b1n0'] 
+
+Started DDict on 2 nodes with 301.9 GB of memory
+
+Launching 64 simulations on 64 workers to generate training data of size 1.25 GB ...
+Done in 6.84 seconds
+IO time: 0.190 seconds
+
+Launching 8 CNN models to train on the simulaiton data ...
+Done in 28.46 seconds
+IO time: 1.734 seconds
+
+
+Running with Parsl tranfering data through futures (last since it will take longer)
+Launching 64 simulations on 64 workers to generate training data of size 1.25 GB ...
+Done in 14.49 seconds
+
+Launching 8 CNN models to train on the simulaiton data ...
+Done in 75.60 seconds
+
+tnguyent@x3006c0s19b0n0:~/ai-science-training-series/03-Coupling-Sim-AI/producer-consumer> bash 9_submit_multinode.sh 
+9_submit_multinode.sh: line 12: cd: /srv/jupyter: No such file or directory
+
+Lmod is automatically replacing "nvidia/24.11" with "gcc-native/14.2".
+
+
+Lmod is automatically replacing "PrgEnv-nvidia/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.32
+
+Running producer-consumer scripts
+with 64 simulations of 1024 x 1024 grid
+
+Let's do a warmup run first with the Parsl + file system implementation (DISCARD THIS DATA)
+Launching 64 simulations on 64 workers to generate training data of size 5.00 GB ...
+Done in 13.18 seconds
+IO time: 0.413 seconds
+
+Launching 8 CNN models to train on the simulaiton data ...
+Done in 56.22 seconds
+IO time: 6.250 seconds
+
+
+Running with Parsl writing to the file system
+Launching 64 simulations on 64 workers to generate training data of size 5.00 GB ...
+Done in 12.05 seconds
+IO time: 0.415 seconds
+
+Launching 8 CNN models to train on the simulaiton data ...
+Done in 56.00 seconds
+IO time: 6.294 seconds
+
+
+Running with DragonHPC
+Dragon running on 2 nodes
+['x3006c0s19b0n0', 'x3006c0s19b1n0'] 
+
+Started DDict on 2 nodes with 301.9 GB of memory
+
+Launching 64 simulations on 64 workers to generate training data of size 5.00 GB ...
+Done in 8.08 seconds
+IO time: 0.785 seconds
+
+Launching 8 CNN models to train on the simulaiton data ...
+Done in 64.41 seconds
+IO time: 3.966 seconds
+
+
+Running with Parsl tranfering data through futures (last since it will take longer)
+Launching 64 simulations on 64 workers to generate training data of size 5.00 GB ...
+Done in 22.69 seconds
+
+Launching 8 CNN models to train on the simulaiton data ...
+Done in 349.29 seconds
